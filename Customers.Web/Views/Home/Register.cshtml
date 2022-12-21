@@ -22,7 +22,7 @@
         </div>
         <div class="input-group">
             <span class="input-group-addon" id="DateOfBirth"><i class="zmdi zmdi-account"></i></span>
-            <input asp-for="DateOfBirth" type="datetime" class="form-control" placeholder="DateOfBirth" aria-describedby="DateOfBirth">
+            <input asp-for="DateOfBirth" type="datetime" class="form-control" placeholder="1990-12-20 08:30:45" aria-describedby="DateOfBirth">
         </div>
 
         <div class="input-group">
@@ -36,6 +36,7 @@
         <div class="input-group">
             <span class="input-group-addon" id="email-address"><i class="zmdi zmdi-email"></i></span>
             <input asp-for="Email" type="text" class="form-control" placeholder="Email" aria-describedby="email-address">
+            <span asp-validation-for="Email"></span>
         </div>
 
 

@@ -73,10 +73,10 @@ namespace Customers.Web.Controllers
 
         #region Delete
 
-        [Route("Delete")]
-        public IActionResult Delete(int Id)
+        [Route("Delete/{id}")]
+        public IActionResult Delete(int id)
         {
-            _customerService.DeleteCustomer(Id);
+            _customerService.DeleteCustomer(id);
             ViewBag.Message = "Customer Deleted";
             return View("SuccessAlert");
         }

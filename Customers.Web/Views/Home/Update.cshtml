@@ -22,7 +22,7 @@
         </div>
         <div class="input-group">
            
-            <input asp-for="DateOfBirth" type="datetime" class="form-control" placeholder="DateOfBirth" aria-describedby="DateOfBirth">
+            <input asp-for="DateOfBirth" type="datetime" class="form-control" placeholder="1990-12-20 08:30:45" aria-describedby="DateOfBirth">
         </div>
 
         <div class="input-group">
@@ -34,8 +34,9 @@
             <input asp-for="BankAccountNumber" type="text" class="form-control" placeholder=" BankAccountNumber " aria-describedby="BankAccountNumber">
         </div>
         <div class="input-group">
-          
+
             <input asp-for="Email" type="text" class="form-control" placeholder="Email" aria-describedby="email-address">
+            <span asp-validation-for="Email"></span>
         </div>
 
 
