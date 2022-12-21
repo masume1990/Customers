@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj": {}
+    "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj": {
+    "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj",
         "projectName": "Customers.DataLayer",
-        "projectPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj",
+        "projectPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj",
         "packagesPath": "C:\\Users\\Masume\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.DataLayer\\obj\\",
+        "outputPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -41,6 +41,22 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -2613,7 +2613,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Customers.DataLayer": "1.0.0"
+          "Customers.DataLayer": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
         },
         "compile": {
           "bin/placeholder/Customers.Core.dll": {}
@@ -2625,6 +2627,10 @@
       "Customers.DataLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+        },
         "compile": {
           "bin/placeholder/Customers.DataLayer.dll": {}
         },
@@ -8640,11 +8646,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.Web\\Customers.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.Web\\Customers.Web.csproj",
       "projectName": "Customers.Web",
-      "projectPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.Web\\Customers.Web.csproj",
+      "projectPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.Web\\Customers.Web.csproj",
       "packagesPath": "C:\\Users\\Masume\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.Web\\obj\\",
+      "outputPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -8664,11 +8670,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.Core\\Customers.Core.csproj": {
-              "projectPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.Core\\Customers.Core.csproj"
+            "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.Core\\Customers.Core.csproj": {
+              "projectPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.Core\\Customers.Core.csproj"
             },
-            "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj": {
-              "projectPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj"
+            "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj": {
+              "projectPath": "C:\\Users\\Masume\\Documents\\Project\\TestProject\\rayan\\git\\Customers\\Customers.DataLayer\\Customers.DataLayer.csproj"
             }
           }
         }

@@ -2191,7 +2191,9 @@
       },
       "Customers.Core/1.0.0": {
         "dependencies": {
-          "Customers.DataLayer": "1.0.0"
+          "Customers.DataLayer": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
         },
         "runtime": {
           "Customers.Core.dll": {}
@@ -2201,6 +2203,10 @@
         }
       },
       "Customers.DataLayer/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+        },
         "runtime": {
           "Customers.DataLayer.dll": {}
         },
