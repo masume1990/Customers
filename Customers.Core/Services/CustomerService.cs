@@ -38,8 +38,8 @@ namespace Customers.Core.Services
 
         public CustomersViewModel GetCustomers(int pageId = 1, string filterEmail = "", string filterLastName = "")
         {
-             IQueryable<Customer> result = _context.Customers.Where(cu => cu.IsDelete == false);
-       
+            IQueryable<Customer> result = _context.Customers.Where(cu => cu.IsDelete == false);
+
 
             if (!string.IsNullOrEmpty(filterEmail))
             {
@@ -69,7 +69,7 @@ namespace Customers.Core.Services
             return _context.Customers.Any(_customer => _customer.FirstName == customer.FirstName && _customer.LastName == customer.LastName && _customer.PhoneNumber == customer.PhoneNumber && _customer.CustomerId != customer.CustomerId);
         }
 
-       
+
 
         public bool IsExistEmail(string email, int id)
         {

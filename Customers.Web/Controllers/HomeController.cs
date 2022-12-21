@@ -30,7 +30,7 @@ namespace Customers.Web.Controllers
         [Route("Register")]
         public IActionResult Register()
         {
-          
+
             return View();
         }
 
@@ -87,7 +87,7 @@ namespace Customers.Web.Controllers
         public IActionResult Update(int id)
         {
             Customer customer = new Customer();
-            customer =  _customerService.GetCustomerById(id);
+            customer = _customerService.GetCustomerById(id);
             ViewBag.Title = "Update  customer";
             return View(customer);
         }
