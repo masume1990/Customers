@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Customers.DataLayer.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,8 +26,12 @@ namespace Customers.Web
             services.AddMvc();
 
             #region DataBase context
+            services.AddDbContext<CustomerContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("CustomerConnection"));
+            }
+           );
 
-            
             #endregion
         }
 
@@ -37,6 +43,7 @@ namespace Customers.Web
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
