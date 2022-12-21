@@ -17,13 +17,13 @@ namespace Customers.Web.Controllers
         {
             _customerService = customerService;
         }
-       
+
         public IActionResult Index(int pageId = 1, string filterLastName = "", string filterEmail = "")
         {
             CustomersViewModel customersViewModel = new CustomersViewModel();
             customersViewModel = _customerService.GetCustomers(pageId, filterEmail, filterLastName);
-             return View(customersViewModel);
-           
+            return View(customersViewModel);
+
         }
 
         #region Register
@@ -63,10 +63,25 @@ namespace Customers.Web.Controllers
                 return View(customer);
             }
             _customerService.AddCustomer(_customer);
-            return View("SuccessRegister", _customer);
-           
+            ViewBag.Message = "Customer is Registered";
+            return View("SuccessAlert");
+
+
         }
         #endregion
+
+        #region Delete
+
+        [Route("Delete")]
+        public IActionResult Delete(int Id)
+        {
+            _customerService.DeleteCustomer(Id);
+            ViewBag.Message = "Customer Deleted";
+            return View("SuccessAlert");
+        }
+        #endregion
+
+
 
     }
 }

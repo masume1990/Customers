@@ -24,6 +24,18 @@ namespace Customers.Core.Services
             return customer.CustomerId;
         }
 
+        public void DeleteCustomer(int CustomerId)
+        {
+            Customer customer = GetCustomerById(CustomerId);
+            customer.IsDelete = true;
+            UpdateCustomer(customer);
+        }
+
+        public Customer GetCustomerById(int CustomerId)
+        {
+            return _context.Customers.Find(CustomerId);
+        }
+
         public CustomersViewModel GetCustomers(int pageId = 1, string filterEmail = "", string filterLastName = "")
         {
              IQueryable<Customer> result = _context.Customers.Where(cu => cu.IsDelete == false);
@@ -31,12 +43,12 @@ namespace Customers.Core.Services
 
             if (!string.IsNullOrEmpty(filterEmail))
             {
-                result = result.Where(u => u.Email.Contains(filterEmail));
+                result = result.Where(cu => cu.Email.Contains(filterEmail));
             }
 
             if (!string.IsNullOrEmpty(filterLastName))
             {
-                result = result.Where(u => u.LastName.Contains(filterLastName));
+                result = result.Where(cu => cu.LastName.Contains(filterLastName));
             }
 
             // Show Item In Page
@@ -47,7 +59,7 @@ namespace Customers.Core.Services
             CustomersViewModel list = new CustomersViewModel();
             list.CurrentPage = pageId;
             list.PageCount = result.Count() / take;
-            list.Customers = result.OrderBy(u => u.CustomerId).Skip(skip).Take(take).ToList();
+            list.Customers = result.OrderBy(cu => cu.CustomerId).Skip(skip).Take(take).ToList();
 
             return list;
         }
@@ -60,6 +72,12 @@ namespace Customers.Core.Services
         public bool IsExistEmail(string email)
         {
             return _context.Customers.Any(customer => customer.Email == email);
+        }
+
+        public void UpdateCustomer(Customer customer)
+        {
+            _context.Update(customer);
+            _context.SaveChanges();
         }
     }
 }

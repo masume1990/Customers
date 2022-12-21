@@ -294,4 +294,4 @@ C:\Users\Masume\Documents\Project\TestProject\rayan\git\Customers\Customers.Web\
 C:\Users\Masume\Documents\Project\TestProject\rayan\git\Customers\Customers.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_MetaTags.cshtml.g.cs
 C:\Users\Masume\Documents\Project\TestProject\rayan\git\Customers\Customers.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Styles.cshtml.g.cs
 C:\Users\Masume\Documents\Project\TestProject\rayan\git\Customers\Customers.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
-C:\Users\Masume\Documents\Project\TestProject\rayan\git\Customers\Customers.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\SuccessRegister.cshtml.g.cs
+C:\Users\Masume\Documents\Project\TestProject\rayan\git\Customers\Customers.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\SuccessAlert.cshtml.g.cs

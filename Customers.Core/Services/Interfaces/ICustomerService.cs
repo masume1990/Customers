@@ -12,5 +12,8 @@ namespace Customers.Core.Services.Interfaces
         bool IsExistEmail(string email);
         int AddCustomer(Customer customer);
         CustomersViewModel GetCustomers(int pageId = 1, string filterEmail = "", string filterLastName = "");
-     }
+        void UpdateCustomer(Customer customer);
+        void DeleteCustomer(int CustomerId);
+        Customer GetCustomerById(int CustomerId);
+    }
 }
