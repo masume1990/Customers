@@ -1,0 +1,12 @@
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\bin\Debug\netcoreapp3.1\Customers.Core.deps.json
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\bin\Debug\netcoreapp3.1\Customers.Core.dll
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\bin\Debug\netcoreapp3.1\Customers.Core.pdb
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\bin\Debug\netcoreapp3.1\Customers.DataLayer.dll
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\bin\Debug\netcoreapp3.1\Customers.DataLayer.pdb
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\obj\Debug\netcoreapp3.1\Customers.Core.csprojAssemblyReference.cache
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\obj\Debug\netcoreapp3.1\Customers.Core.csproj.CoreCompileInputs.cache
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\obj\Debug\netcoreapp3.1\Customers.Core.AssemblyInfoInputs.cache
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\obj\Debug\netcoreapp3.1\Customers.Core.AssemblyInfo.cs
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\obj\Debug\netcoreapp3.1\Customers.Core.csproj.CopyComplete
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\obj\Debug\netcoreapp3.1\Customers.Core.dll
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.Core\obj\Debug\netcoreapp3.1\Customers.Core.pdb

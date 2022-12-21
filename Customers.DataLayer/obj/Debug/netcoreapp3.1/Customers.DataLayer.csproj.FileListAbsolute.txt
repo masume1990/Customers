@@ -1,0 +1,9 @@
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.DataLayer\bin\Debug\netcoreapp3.1\Customers.DataLayer.deps.json
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.DataLayer\bin\Debug\netcoreapp3.1\Customers.DataLayer.dll
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.DataLayer\bin\Debug\netcoreapp3.1\Customers.DataLayer.pdb
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.DataLayer\obj\Debug\netcoreapp3.1\Customers.DataLayer.csprojAssemblyReference.cache
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.DataLayer\obj\Debug\netcoreapp3.1\Customers.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.DataLayer\obj\Debug\netcoreapp3.1\Customers.DataLayer.AssemblyInfoInputs.cache
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.DataLayer\obj\Debug\netcoreapp3.1\Customers.DataLayer.AssemblyInfo.cs
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.DataLayer\obj\Debug\netcoreapp3.1\Customers.DataLayer.dll
+C:\Users\Masume\Documents\Project\TestProject\rayan\Customers\Customers.DataLayer\obj\Debug\netcoreapp3.1\Customers.DataLayer.pdb
