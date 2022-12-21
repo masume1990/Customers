@@ -1,4 +1,4 @@
-﻿using Customers.DataLayer.Entitites.Customer;
+﻿using Customers.DataLayer.Entities.Customer;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

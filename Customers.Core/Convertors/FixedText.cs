@@ -10,5 +10,10 @@ namespace Customers.Core.Convertors
         {
             return email.Trim().ToLower();
         }
+
+        public static string FixedString(string text)
+        {
+            return text.Trim();
+        }
     }
 }

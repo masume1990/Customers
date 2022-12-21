@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Customers.DataLayer.Entitites.Customer
+namespace Customers.DataLayer.Entities.Customer
 {
     public class Customer
     {
@@ -49,5 +49,7 @@ namespace Customers.DataLayer.Entitites.Customer
         [Required(ErrorMessage = "The {0} is required")]
         [MaxLength(16, ErrorMessage = "Maximum character is {1}")]
         public string BankAccountNumber { get; set; }
+
+        public bool IsDelete { get; set; }
     }
 }
