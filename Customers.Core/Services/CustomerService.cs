@@ -66,12 +66,14 @@ namespace Customers.Core.Services
 
         public bool IsExistCustomer(Customer customer)
         {
-            return _context.Customers.Any(_customer => _customer.FirstName == customer.FirstName && _customer.LastName == customer.LastName && _customer.PhoneNumber == customer.PhoneNumber);
+            return _context.Customers.Any(_customer => _customer.FirstName == customer.FirstName && _customer.LastName == customer.LastName && _customer.PhoneNumber == customer.PhoneNumber && _customer.CustomerId != customer.CustomerId);
         }
 
-        public bool IsExistEmail(string email)
+       
+
+        public bool IsExistEmail(string email, int id)
         {
-            return _context.Customers.Any(customer => customer.Email == email);
+            return _context.Customers.Any(customer => customer.Email == email && customer.CustomerId != id);
         }
 
         public void UpdateCustomer(Customer customer)

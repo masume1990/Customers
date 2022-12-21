@@ -30,6 +30,7 @@ namespace Customers.Web.Controllers
         [Route("Register")]
         public IActionResult Register()
         {
+          
             return View();
         }
 
@@ -41,7 +42,7 @@ namespace Customers.Web.Controllers
             {
                 return View(customer);
             }
-            if (_customerService.IsExistEmail(FixedText.FixedEmail(customer.Email)))
+            if (_customerService.IsExistEmail(FixedText.FixedEmail(customer.Email), 0))
             {
                 ModelState.AddModelError("Email", "Email is invalid!");
                 return View(customer);
@@ -81,7 +82,53 @@ namespace Customers.Web.Controllers
         }
         #endregion
 
+        #region Update
+        [Route("Update/{id}")]
+        public IActionResult Update(int id)
+        {
+            Customer customer = new Customer();
+            customer =  _customerService.GetCustomerById(id);
+            ViewBag.Title = "Update  customer";
+            return View(customer);
+        }
 
+        [Route("Update/{id}")]
+        [HttpPost]
+        public IActionResult Update(Customer customer)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(customer);
+            }
+            if (_customerService.IsExistEmail(FixedText.FixedEmail(customer.Email), customer.CustomerId))
+            {
+                ModelState.AddModelError("Email", "Email is invalid!");
+                return View(customer);
+            }
+
+            Customer _customer = new Customer()
+            {
+                CustomerId = customer.CustomerId,
+                FirstName = FixedText.FixedString(customer.FirstName),
+                LastName = FixedText.FixedString(customer.LastName),
+                DateOfBirth = customer.DateOfBirth,
+                BankAccountNumber = FixedText.FixedString(customer.BankAccountNumber),
+                PhoneNumber = FixedText.FixedString(customer.PhoneNumber),
+                Email = FixedText.FixedEmail(customer.Email)
+
+            };
+            if (_customerService.IsExistCustomer(_customer))
+            {
+                ModelState.AddModelError("FirstName", "Customer is invalid!");
+                return View(customer);
+            }
+            _customerService.UpdateCustomer(_customer);
+            ViewBag.Message = "Customer is updated";
+            return View("SuccessAlert");
+
+
+        }
+        #endregion
 
     }
 }

@@ -1,40 +1,40 @@
 ﻿@model Customers.DataLayer.Entities.Customer.Customer
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Update";
 }
 
-    <h1>@ViewData["Title"]</h1>
+<h1>@ViewData["Title"]</h1>
 
 
 
 <div class="form-layer">
 
-    <form asp-action="Register" method="post">
+    <form asp-action="Update" method="post">
 
         <div class="input-group">
-            <span class="input-group-addon" id="FirstName"><i class="zmdi zmdi-account"></i></span>
+           
             <input asp-for="FirstName" type="text" class="form-control" placeholder="FirstName" aria-describedby="FirstName">
-
+            <input asp-for="CustomerId" type="hidden" />
         </div>
         <div class="input-group">
-            <span class="input-group-addon" id="LastName"><i class="zmdi zmdi-account"></i></span>
+         
             <input asp-for="LastName" type="text" class="form-control" placeholder="LastName" aria-describedby="LastName">
         </div>
         <div class="input-group">
-            <span class="input-group-addon" id="DateOfBirth"><i class="zmdi zmdi-account"></i></span>
+           
             <input asp-for="DateOfBirth" type="datetime" class="form-control" placeholder="DateOfBirth" aria-describedby="DateOfBirth">
         </div>
 
         <div class="input-group">
-            <span class="input-group-addon" id="PhoneNumber"><i class="zmdi zmdi-account"></i></span>
+          
             <input asp-for="PhoneNumber" type="text" class="form-control" placeholder=" PhoneNumber" aria-describedby="PhoneNumber">
         </div>
         <div class="input-group">
-            <span class="input-group-addon" id="BankAccountNumber"><i class="zmdi zmdi-account"></i></span>
+           
             <input asp-for="BankAccountNumber" type="text" class="form-control" placeholder=" BankAccountNumber " aria-describedby="BankAccountNumber">
         </div>
         <div class="input-group">
-            <span class="input-group-addon" id="email-address"><i class="zmdi zmdi-email"></i></span>
+          
             <input asp-for="Email" type="text" class="form-control" placeholder="Email" aria-describedby="email-address">
         </div>
 
