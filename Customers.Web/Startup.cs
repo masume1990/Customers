@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Customers.Core.Services;
+using Customers.Core.Services.Interfaces;
 using Customers.DataLayer.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -23,7 +25,7 @@ namespace Customers.Web
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc(options => options.EnableEndpointRouting = false);
 
             #region DataBase context
             services.AddDbContext<CustomerContext>(options =>
@@ -31,6 +33,12 @@ namespace Customers.Web
                 options.UseSqlServer(Configuration.GetConnectionString("CustomerConnection"));
             }
            );
+
+            #endregion
+
+            #region Ioc
+
+            services.AddTransient<ICustomerService, CustomerService>();
 
             #endregion
         }
@@ -46,13 +54,28 @@ namespace Customers.Web
             app.UseStaticFiles();
             app.UseRouting();
 
+            app.UseMvc();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                
+                endpoints.MapControllerRoute(
+
+                    name: "Default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}"
+                );
             });
+
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Hello World!");
+            });
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //        await context.Response.WriteAsync("Hello World!");
+            //    });
+            //});
         }
     }
 }

@@ -40,6 +40,7 @@ namespace Customers.DataLayer.Entitites.Customer
         [Display(Name = "Email address")]
         [Required(ErrorMessage = "The {0} is required")]
         [EmailAddress(ErrorMessage = "Invalid {0}")]
+        [MaxLength(100, ErrorMessage = "Maximum character is {1}")]
         public string Email { get; set; }
 
 
